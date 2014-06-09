@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="codecamp, charleston digital corridor" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <title>Day 2</title>
+
+    <!--*****/////  Stylesheets  /////*****-->
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/reset.css">      
+    <link rel="stylesheet" media="screen" href="stylesheets/deck/extensions/deck.goto.css">
+    <link rel="stylesheet" media="screen" href="stylesheets/deck/extensions/deck.menu.css">
+    <link rel="stylesheet" media="screen" href="stylesheets/deck/extensions/deck.navigation.css">
+    <link rel="stylesheet" media="screen" href="stylesheets/deck/extensions/deck.status.css">
+    <link rel="stylesheet" media="screen" href="stylesheets/deck/extensions/deck.scale.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+  </head>
+
+  <body>
+    
+    <header class="index_header">
+      
+      <div class="index_header_wrapper">
+        
+        <ul class="header_left_nav">
+          <li><a href="index.html">Home</a></li>
+          <li class="active_link"><a href="day1.html">Day 1</a></li>
+          <li><a href="day2.html">Day 2</a></li>
+        </ul>
+        
+        <ul class="header_right_nav">
+          <li><a href="day3.html">Day 3</a></li>          
+          <li><a href="day4.html">Day 4</a></li>
+          <li><a href="references.html">References</a></li>
+        </ul>
+    
+        <a href="index.html">
+          <img class="index_logo" src="images/logo.png" /> 
+        </a>
+      
+      </div>
+      
+    </header>
+    
+    <!--*****/////  Assignments - Content /////*****-->
+    
+    <section class="index_content">
+      
+      <h2 class="course_title">Day 2</h2>
+      
+      <div class="assignments_wrapper">
+        
+        <!--*****/////  List of Assignments  /////*****-->
+        
+        <ul class="assignments">
+          <li class="assignment active_assignment_link" data-index="0">
+            <div class="assignment_toggle"><span>Exercise 1:</span> More Events</div>
+          </li>
+          <li class="assignment" data-index="1">
+            <div class="assignment_toggle"><span>Exercise 2:</span> Building a Game</div>
+          </li>
+        </ul>
+        
+        <!--*****/////  Corresponding Assignment  /////*****-->
+        
+        <div class="assignment_content">
+          
+          <!--*****/////  Assignment Box 1  /////*****-->
+          
+          <div class="assignment_text active_assignment" data-index="0" >
+            
+            <p class="assignment_box_details">
+              <strong>
+                We're regular pros at `click` and `hover` events now. Let's put it to some use, shall we?
+              </strong>
+            </p>
+            <p class="assignment_box_details subnote">
+              If you have not already done so, download the Day 2 Course Materials <a href="exercises/Day_2.zip">here</a>.
+            </p>
+
+            <ul class="assignment_box_details">
+              <li>
+                Add click event to `box` elements to hide them. What "cooler" things can we do than just hide??
+                <ul>
+                  <li>
+                    Are they really gone? Look in the DOM.                    
+                  </li>
+                  <li>
+                    Add some jQuery `after` you hide the element, to remove it completely from the DOM.                    
+                  </li>
+                </ul>
+              </li>
+              <li>
+                What kinds happens when they're all gone?
+                <ul>
+                  <li>
+                    Let's write a function to add more. How do I insert a new element into the `body`? Write some code that will do that.  
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            
+
+            <p class="assignment_box_details subnote">
+              Note: some of the exercises/instructions are intentionally left vague. Further discussion in class will supplement the exercises and answers.
+            </p>
+
+          </div>
+          
+          <!--*****/////  Assignment Box 2  /////*****-->
+
+          <div class="assignment_text" data-index="1" >
+            
+            <p class="assignment_box_details">
+              <strong>
+                Building a Robotic Overlord.
+              </strong>
+            </p>
+            <p class="assignment_box_details subnote">
+              If you have not already done so, download the Day 2 Course Materials <a href="exercises/Day_2.zip">here</a>.
+            </p>
+
+            <p class="assignment_box_details">Okay jQueriers, it's time to get for reals. We're gonna make a full up game out of this, building on everything we've done to this point.</p>
+
+            <ul class="assignment_box_details">
+              <li>
+                add click events to all `box` elements to:
+                <ul>
+                  <li>
+                    `hide` them
+                  </li>
+                  <li>
+                    `remove` them from the DOM
+                  </li>
+                  <li>
+                    after `remove`ing them, increment the number inside `boxes destroyed` box
+                  </li>
+                </ul>
+              </li>
+              <li>
+                write a function to insert new `box` elements into the `section` tag with the class `boxes`. Make it a full on, callable function
+              </li>
+              <li>
+                wrap that function in some sort of javascript thing that will run repeatedly every few seconds (google!).
+              </li>
+              <li>
+                if we get here in time, write some javascript logic that will check if there are any boxes remaining, and if not, change the text on the page to say that you've won the game!
+              </li>
+
+
+            </ul>
+            
+            <p class="assignment_box_details subnote">
+              Note: some of the exercises/instructions are intentionally left vague. Further discussion in class will supplement the exercises and answers.
+            </p>
+          </div>
+
+      </div>
+      
+    </section>
+    
+    <footer class="footer">
+      <div class="copyright">
+        <h3>Copyright © 2014 Charleston Digital Corridor</h3>
+        <img class="cdc_logo" src="images/cdc_logo.png" />
+      </div>
+    </footer>
+    
+    <!--*****/////  Site Functionality  /////*****-->
+    
+    <script src="javascripts/jquery-10.1.2.min.js"></script>
+    <script src="javascripts/modernizr.custom.js"></script>
+    <script src="javascripts/deck/deck.core.js"></script>
+    <script src="javascripts/deck/extensions/deck.menu.js"></script>
+    <script src="javascripts/deck/extensions/deck.goto.js"></script>
+    <script src="javascripts/deck/extensions/deck.status.js"></script>
+    <script src="javascripts/deck/extensions/deck.navigation.js"></script>
+    <script src="javascripts/deck/extensions/deck.scale.js"></script>
+    <script src="javascripts/site.js"></script>
+
+  </body>
+</html>

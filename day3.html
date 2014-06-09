@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="codecamp, charleston digital corridor" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <title>Day 3</title>
+
+    <!--*****/////  Stylesheets  /////*****-->
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/reset.css">      
+    <link rel="stylesheet" media="screen" href="stylesheets/deck/extensions/deck.goto.css">
+    <link rel="stylesheet" media="screen" href="stylesheets/deck/extensions/deck.menu.css">
+    <link rel="stylesheet" media="screen" href="stylesheets/deck/extensions/deck.navigation.css">
+    <link rel="stylesheet" media="screen" href="stylesheets/deck/extensions/deck.status.css">
+    <link rel="stylesheet" media="screen" href="stylesheets/deck/extensions/deck.scale.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+  </head>
+
+  <body>
+    
+    <header class="index_header">
+      
+      <div class="index_header_wrapper">
+        
+        <ul class="header_left_nav">
+          <li><a href="index.html">Home</a></li>
+          <li class="active_link"><a href="day1.html">Day 1</a></li>
+          <li><a href="day2.html">Day 2</a></li>
+        </ul>
+        
+        <ul class="header_right_nav">
+          <li><a href="day3.html">Day 3</a></li>          
+          <li><a href="day4.html">Day 4</a></li>
+          <li><a href="references.html">References</a></li>
+        </ul>
+    
+        <a href="index.html">
+          <img class="index_logo" src="images/logo.png" /> 
+        </a>
+      
+      </div>
+      
+    </header>
+    
+    <!--*****/////  Assignments - Content /////*****-->
+    
+    <section class="index_content">
+      
+      <h2 class="course_title">Day 3</h2>
+      
+      <div class="assignments_wrapper">
+        
+        <!--*****/////  List of Assignments  /////*****-->
+        
+        <ul class="assignments">
+          <li class="assignment active_assignment_link" data-index="0">
+            <div class="assignment_toggle"><span>Exercise 1:</span> The Rainbow Effect</div>
+          </li>
+          <li class="assignment" data-index="1">
+            <div class="assignment_toggle"><span>Exercise 2:</span> Accordians</div>
+          </li>
+          <li class="assignment" data-index="2">
+            <div class="assignment_toggle"><span>Exercise 3:</span> Sliders</div>
+          </li>
+        </ul>
+        
+        <!--*****/////  Corresponding Assignment  /////*****-->
+        
+        <div class="assignment_content">
+          
+          <!--*****/////  Assignment Box 1  /////*****-->
+          
+          <div class="assignment_text active_assignment" data-index="0" >
+            
+            <p class="assignment_box_details">
+              <strong>
+                Practice with Data and Functions. Let's make some neat effects with the `.css()` function.
+              </strong>
+            </p>
+            <p class="assignment_box_details subnote">
+              If you have not already done so, download the Day 3 Course Materials <a href="exercises/Day_3.zip">here</a>.
+            </p>
+
+            <ul class="assignment_box_details">
+              <li>
+                Create an array with a series of CSS color values.                
+              </li>
+              <li>
+                Add a click event observer for all .box elements, changing the css background color of each to a different index of the array from step 1 each time you click it.                
+              </li>
+              <li>
+                Replace your array of collors with a functino that will generate a RANDOM color every time you call it.
+              </li>
+              <li>
+                Change your click observer to a hover observer.                
+              </li>
+            </ul>
+
+            <p class="assignment_box_details subnote">
+              Note: some of the exercises/instructions are intentionally left vague. Further discussion in class will supplement the exercises and answers.
+            </p>
+
+          </div>
+          
+          <!--*****/////  Assignment Box 2  /////*****-->
+
+          <div class="assignment_text" data-index="1" >
+            
+            <p class="assignment_box_details">
+              <strong>
+                Accordians
+              </strong>
+            </p>
+            <p class="assignment_box_details subnote">
+              If you have not already done so, download the Day 3 Course Materials <a href="exercises/Day_3.zip">here</a>.
+            </p>
+
+            <p class="assignment_box_details">Accordians are a common UI element on webpages, we're gonna build one. Should be simple enough, we're pros at this stuff by now.</p>
+
+            <ul class="assignment_box_details">
+              <li>
+                Create a function that will hide all dropdown content when you click an `li`.
+              </li>
+              <li>
+                Change the function to then display only the dropdown content for the `li` that was clicked
+              </li>
+              <li>
+                Change the function to slide the elements down or up instead of just showing or hiding them.
+              </li>
+            </ul>
+
+            
+            <p class="assignment_box_details subnote">
+              Note: some of the exercises/instructions are intentionally left vague. Further discussion in class will supplement the exercises and answers.
+            </p>
+          </div>
+
+          <!--*****/////  Assignment Box 3  /////*****-->
+
+          <div class="assignment_text" data-index="2" >
+            
+            <p class="assignment_box_details">
+              <strong>
+                Sliders
+              </strong>
+            </p>
+            <p class="assignment_box_details subnote">
+              If you have not already done so, download the Day 3 Course Materials <a href="exercises/Day_3.zip">here</a>.
+            </p>
+
+            <p class="assignment_box_details">
+              We're going to build a slider next.
+            </p>
+            <p class="assignment_box_details">
+              If you look in the html markup, you'll see there's a `ul` with `li`s, which will be our slides. The first `li` has an `active` class, which makes it show up while the others are hidden.
+            </p>
+            <p class="assignment_box_details">
+              Our controls will simply be altering the `li`s to add or remove the `active` class to the slide we wish to show.
+            </p>
+
+            <ul class="assignment_box_details">
+              <li>
+                We need controls for this slider. Write a function called `moveTo()` which will accept 1 parameter: the # of the slide we wish to move to. This function should remove the `active` class from all other `li`s and add it to the one we want to move to.
+              </li>
+              <li>
+                Call this function inside your Chrome console to make sure it works properly.                
+              </li>
+              <li>
+                After we're sure it works correctly, we need to add in some new html for our actual controls.                
+              </li>
+              <li>
+                Add a new `div` to the *beginning* of the `ul` with a class `prevous`.                
+              </li>
+              <li>
+                Add a new `div` to the *end* of the `ul` with a class `next`.                
+              </li>
+              <li>
+                Add event observers for the `previous` and `next` buttons we just inserted. The observers should change slides to the next or previous slides in the `li`.                
+              </li>
+            </ul>
+
+
+            
+            <p class="assignment_box_details subnote">
+              Hint: you'll need a way of keeping track of which slide you are currently on. Alternatively, you can calculate that value in your `moveTo()` function.
+            </p>
+            <p class="assignment_box_details subnote">
+              Note: some of the exercises/instructions are intentionally left vague. Further discussion in class will supplement the exercises and answers.
+            </p>
+
+          </div>
+
+      </div>
+      
+    </section>
+    
+    <footer class="footer">
+      <div class="copyright">
+        <h3>Copyright © 2014 Charleston Digital Corridor</h3>
+        <img class="cdc_logo" src="images/cdc_logo.png" />
+      </div>
+    </footer>
+    
+    <!--*****/////  Site Functionality  /////*****-->
+    
+    <script src="javascripts/jquery-10.1.2.min.js"></script>
+    <script src="javascripts/modernizr.custom.js"></script>
+    <script src="javascripts/deck/deck.core.js"></script>
+    <script src="javascripts/deck/extensions/deck.menu.js"></script>
+    <script src="javascripts/deck/extensions/deck.goto.js"></script>
+    <script src="javascripts/deck/extensions/deck.status.js"></script>
+    <script src="javascripts/deck/extensions/deck.navigation.js"></script>
+    <script src="javascripts/deck/extensions/deck.scale.js"></script>
+    <script src="javascripts/site.js"></script>
+
+  </body>
+</html>
