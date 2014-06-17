@@ -1,0 +1,98 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+// Single side border-radius
+
+@mixin border-top-radius($radius) {
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+   -webkit-border-top-left-radius: $radius;
+   border-top-left-radius: $radius;
+   background-clip: padding-box;
+}
+@mixin border-right-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+     -webkit-border-top-right-radius: $radius;
+     border-top-right-radius: $radius;
+     background-clip: padding-box;
+}
+@mixin border-bottom-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+   -webkit-border-bottom-left-radius: $radius;
+   border-bottom-left-radius: $radius;
+   background-clip: padding-box;
+}
+@mixin border-left-radius($radius) {
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+     -webkit-border-top-left-radius: $radius;
+     border-top-left-radius: $radius;
+     background-clip: padding-box;
+}
+
+// generic transform
+@mixin transform($transforms) {
+     -moz-transform: $transforms;
+       -o-transform: $transforms;
+      -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+
+
+
+$mq-support: true !default;
+$mq-fixed-value: 1024px !default;
+
+@mixin bp($feature, $value) {
+    // Set global device param
+    $media: only screen;
+
+    // Media queries supported
+    @if $mq-support == true {
+
+        @media #{$media} and ($feature: $value) {
+            @content;
+        }
+
+        // Media queries not supported
+    } @else {
+
+        @if $feature == 'min-width' {
+            @if $value <= $mq-fixed-value {
+                @content;
+            }
+        } @else if $feature == 'max-width' {
+            @if $value >= $mq-fixed-value {
+                @content;
+            }
+        }
+
+    }
+}
+
+
+
+@mixin sml() {
+  @include bp(max-width, 580px) {
+    @content;
+  }
+}
+
+@mixin mdm() {
+  @include bp(max-width, 770px) {
+    @content;
+  }
+}
+
+@mixin lg() {
+  @include bp(min-width, 771px) {
+    @content;
+  }
+}

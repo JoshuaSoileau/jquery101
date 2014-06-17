@@ -1,0 +1,36 @@
+button {
+  @include border-radius(4px);
+  color: white;
+  font-size: 1.2em;
+  padding: 8px 15px;
+  background-color: #181717;
+  background-image: url(http://www.transparenttextures.com/patterns/squairy.png);
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  border: 1px solid black;
+  -webkit-box-shadow: 0 2px 1px rgba(255, 255, 255, 0.3), 0px -2px 5px rgba(0, 0, 0, 0.5), inset 1px 2px 5px rgba(255,255,255,0.15);
+  -moz-box-shadow: 0 2px 1px rgba(255, 255, 255, 0.3), 0px -2px 5px rgba(0, 0, 0, 0.5), inset 1px 2px 5px rgba(255,255,255,0.15);
+  box-shadow: 0 2px 1px rgba(255, 255, 255, 0.3), 0px -2px 5px rgba(0, 0, 0, 0.5), inset 1px 2px 5px rgba(255,255,255,0.15);
+ 
+ 
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    @include transform(translateY(2px));
+  }
+
+}
+
+.new-city {
+  -webkit-box-shadow: 0 -2px 1px rgba(0, 0, 0, 0.1), 0px 2px 5px rgba(0, 0, 0, 0.5), inset 1px 2px 5px rgba(255,255,255,0.6);
+  -moz-box-shadow: 0 -2px 1px rgba(0, 0, 0, 0.1), 0px 2px 5px rgba(0, 0, 0, 0.5), inset 1px 2px 5px rgba(255,255,255,0.6);
+  box-shadow: 0 -2px 1px rgba(0, 0, 0, 0.1), 0px 2px 5px rgba(0, 0, 0, 0.5), inset 1px 2px 5px rgba(255,255,255,0.6);
+
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
+  opacity: 0.6;
+
+}
